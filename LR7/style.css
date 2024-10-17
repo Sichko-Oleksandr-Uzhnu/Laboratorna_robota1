@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: hotpink;
+  font-size: 2em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-bottom: 15px dotted purple;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.job-title {
+  color: #999999;
+  font-weight: bold;
+}
+
+ul {
+  padding: 15px;
+  list-style-position: inside;
+  background-color: #eeeeee; 
+  border: 5px solid purple;
+}
+
+a:link, a:visited {
+  color: #fb6542;
+}
+
+a:hover {
+  color: green;
+  text-decoration: none;
+}
+
+#article {
+  background: url('star.svg') right top repeat-y scroll;
+  border-left-width: 15px;
+  border: 20px solid blue;
+  border-right-width: 15px;
+  overflow-y: auto;
+  margin: 30px 20px;
+  padding: 30px calc(3 * 1em) 5px calc(3 * 1em); 
+  height: 150px;
+  border-radius: 100px / 30px;
+}
+
+#article p:last-of-type {
+  direction: rtl;
+  color: rgb(47, 183, 68);
+}
+
+li {
+  padding-left: 15px;
+}
