@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Довідник співробітників</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Довідник співробітників</h1>
+    </header>
+
+    <section class="controls">
+        <input type="text" id="searchInput" placeholder="Пошук за ім'ям..." oninput="filterEmployees()">
+        <select id="departmentFilter" onchange="filterEmployees()">
+            <option value="">Всі відділи</option>
+        </select>
+        <select id="statusFilter" onchange="filterEmployees()">
+            <option value="">Всі статуси</option>
+            <option value="Active">Активний</option>
+            <option value="On Leave">У відпустці</option>
+            <option value="Retired">На пенсії</option>
+        </select>
+        <button onclick="sortEmployeesByName()">Сортувати за іменем</button>
+        <button onclick="sortEmployeesByHireDate()">Сортувати за датою найму</button>
+    </section>
+
+    <section>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ім'я</th>
+                    <th>Відділ</th>
+                    <th>Посада</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Таблиця співробітників генерується тут -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Модальне вікно для детальної інформації про співробітника -->
+    <div id="employeeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div id="modalDetails">
+                <!-- Деталі співробітника генеруються тут -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Автор: Січко Олексндр </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html
